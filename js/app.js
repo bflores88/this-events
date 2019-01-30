@@ -38,5 +38,19 @@ function showSecret(){
 
 /*3) to the thumbs down icon that will add a count (counter) for each time the icon is clicked on.*/
 
+var rankItems = document.getElementsByClassName('thumb');
 
+for (var i = 0; i<rankItems.length; i++){
+    rankItems[i].addEventListener('click', thumbDown);
+
+    var countDown = document.createElement('div');
+    countDown.className = 'counter';
+    rankItems[i].appendChild(countDown);
+}
+
+function thumbDown(){
+    var countedDown = this.querySelectorAll('.counter')[0];
+    countedDown.innerHTML++;
+ 
+}
 
