@@ -3,6 +3,21 @@
 
 /*1) to the navmenu items (Home, Location, Blog) that will show and hide the contents for that specific navmenu item.*/
 
+var naviClass = document.getElementsByClassName('navi');
+
+for (var i = 0; i<naviClass.length; i++){
+    naviClass[i].addEventListener('click', showContent);
+}
+
+function showContent(){
+    var displayContent = this.querySelector('.inner');
+    if(displayContent.style.display === 'none'){
+        displayContent.style.display = 'block';
+    } else {
+        displayContent.style.display = 'none';
+    }
+    
+}
 
 /*2) to each restaurant name that will show and hide (toggle) the secret menu item for that particular restaurant.*/
 
